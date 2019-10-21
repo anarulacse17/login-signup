@@ -1,0 +1,59 @@
+  <head>
+        <title>Sign Up Form</title>
+    
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="login1.css">
+    </head>
+    <body>
+
+      <form action="#" method="post">
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="cpassword" name="password">
+            <label for="password">Confirm Password:</label>
+          <input type="password" id="password" name="password">
+          <label>Age:</label>
+          <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+          <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>
+        <label>Gender:</label>
+          <input type="radio" id="male" value="male" name="gender"><label for="under_13" class="light">Male</label><br>
+          <input type="radio" id="female" value="female" name="gender"><label for="over_13" class="light">Female</label>
+        </fieldset>
+        
+        <button type="submit" onclick="clik()">Sign Up</button>
+        <a href ="login.html">Log in</a>
+
+      </form>
+      <script>
+                function clik()
+                {
+                   var passd1=document.getElementById('password').value;
+                   var passd2=document.getElementById('cpassword').value;
+                   var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+                    if(passd1==''){
+                      alert('Please enter the Password');
+                      return false;
+                    }
+                    else if(passd1!=passd2)
+                    {
+                      alert('Password did not match');
+                    return false;
+                    }
+                   else{
+                        alert('Login Succesful!');
+                          return true;
+                        }
+                      }
+            </script>
+    </body>
+</html>
